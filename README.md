@@ -20,7 +20,7 @@
 mongod --dbpath D:MongoDB\data
 ```
 
-在浏览器输入：http://localhost:27017/显示：
+在浏览器输入：http://localhost:27017/ 显示：
 
 It looks like you are trying to access MongoDB over HTTP on the native driver port.
 
@@ -177,5 +177,3 @@ List<UmsMenuNode> children = menuList.stream()
 在repository包下有三个接口，调试一下会发现接口中的方法既不是重写，也没有具体实现，但是能在其他类中直接调用。
 
 原因其实是这三个接口继承了`MongoRepository`，而`MongoRepository`是Spring Data提供的一个接口，它通过Spring Data JPA或者Spring Data MongoDB等数据访问框架来动态实现接口中的方法。这些方法都是基于**Spring Data JPA/MongoDB的查询方法命名规范**自动生成的。Spring Data允许我们通过遵循一定的命名规则，定义查询方法，而不需要手动实现这些方法。
-
->>>>>>> 54b03ae (first commit)
